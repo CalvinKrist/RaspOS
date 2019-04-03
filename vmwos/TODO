@@ -1,0 +1,94 @@
+Global TODO
+~~~~~~~~~~~
+
+Known Kernel Bugs:
+	+ pi3: "temp" temperature stops working once virtual memory is enabled
+	+ something is still off about the chdir code
+	+ pi1: segfault kill on inavlid memory access causes weird behavior
+		(probably not restoring stack correctly)
+	+ device_tree code truncates the command line at 255 bytes
+	+ the occasional "unknown interrupt" (memtest triggers this on pi3)
+		The lightning bolt appears, so probably a low-power problem
+		(how do we read this source?)
+
+	+ Framebuffer access takes forever, should not do inside of a
+		syscall  (should buffer and only send out every 60 Hz or so?)
+	+ Interrupts are disabled during a syscall, so we can lose clock
+		ticks
+	+ user accounting resolution: how does the linux-kernel do this?
+		we can't account sub 16ms resolution.
+		Probably read out the countdown register even if it hasn't
+		triggered yet.
+	+ Compiling error with old gcc -- smp code setting the constant
+		for the stack values.  Split to two instructions rather
+		than relying on movt insns
+
+
+Known Userspace Bugs:
+	+
+
+Kernel feature requests:
+	+ system calls
+		- mmap() syscall
+		- getcwd() syscall
+		- fcntl O_NONBLOCK support (for tbo)
+	+ filesystems
+		- VFS filesystem abstraction
+		- fat filesystem driver
+		- ext2 filesystem driver
+		- dos33fs
+	+ block layer
+		- loopback device
+		- partition table support
+	+ device drivers
+		- i2c support
+		- sd card support
+		- spi support
+		- mini-uart driver
+		- 1-wire driver
+		- USB ( https://github.com/rsta2/uspi )
+		- sound
+	+ keyboard driver
+		- Properly generate ANSI escape chars for arrows, etc
+		- Use FIQ interrupt?
+	+ framebuffer:
+		- queue up updates off screen, have kernel thread update
+		  maybe once a tick (64 fps)
+		- allocate framebuffer memory at run time, rather than
+		  big static array
+	+ heartbeat -- uses GPIO29 on 3B+?
+	+ times() -- higher granularity on the system accounting
+		need a free-running timer (or PMU?)
+		Have timer count but only trigger overflow at higher value?
+
+Userspace feature requests:
+	+ vlibc
+		- scanf()
+		- malloc()
+		- write() file support
+
+	+ printa / printb
+		- make printb a hard link to printb
+	+ shell
+		- command history
+		- tab completion
+	+ New utilities/programs
+		- init (actual, rather than shell)
+		- text editor
+		- assembler
+		- compiler
+		- du
+		- grep
+		- less
+
+Pi Generational Support
+	+ Pi2 -- check that it works on both old (armv7) and new (armv8)
+	+ Pi2/Pi3 enhanced irqchip support, see:
+		[PATCH 4/4] irqchip: Add bcm2836 interrupt controller for Raspberry     Pi 2
+	+ Pi3 -- add ARMv8 (arm64) support
+	+ Pi3 ACT LED (behind i2c GPIO extender)
+
+Performance:
+	+ tophalf/bottomhalf IRQ split
+	+ optimized memcpy
+	+ optimize graphics routines
