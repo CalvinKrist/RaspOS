@@ -1,0 +1,821 @@
+Archive member included to satisfy reference by file (symbol)
+
+boot/boot-arm1176.a(boot-arm1176.o)
+                              (_start)
+boot/boot-arm1176.a(hardware_detect.arm1176.o)
+                              kernel_main.arm1176.o (hardware_detect)
+boot/boot-arm1176.a(atags.arm1176.o)
+                              boot/boot-arm1176.a(hardware_detect.arm1176.o) (atags_detect)
+boot/boot-arm1176.a(device_tree.arm1176.o)
+                              boot/boot-arm1176.a(hardware_detect.arm1176.o) (devicetree_setup)
+syscalls/syscalls-arm1176.a(swi_handler.arm1176.o)
+                              boot/boot-arm1176.a(boot-arm1176.o) (swi_handler)
+syscalls/syscalls-arm1176.a(syscalls.arm1176.o)
+                              syscalls/syscalls-arm1176.a(swi_handler.arm1176.o) (swi_handler_c)
+syscalls/syscalls-arm1176.a(getcpu.arm1176.o)
+                              syscalls/syscalls-arm1176.a(syscalls.arm1176.o) (getcpu)
+syscalls/syscalls-arm1176.a(nanosleep.arm1176.o)
+                              syscalls/syscalls-arm1176.a(syscalls.arm1176.o) (nanosleep)
+syscalls/syscalls-arm1176.a(sysinfo.arm1176.o)
+                              syscalls/syscalls-arm1176.a(syscalls.arm1176.o) (sysinfo)
+syscalls/syscalls-arm1176.a(times.arm1176.o)
+                              syscalls/syscalls-arm1176.a(syscalls.arm1176.o) (times)
+syscalls/syscalls-arm1176.a(uname.arm1176.o)
+                              syscalls/syscalls-arm1176.a(syscalls.arm1176.o) (uname)
+interrupts/interrupts-arm1176.a(interrupts.arm1176.o)
+                              boot/boot-arm1176.a(boot-arm1176.o) (fiq_handler)
+interrupts/interrupts-arm1176.a(ipi.arm1176.o)
+                              syscalls/syscalls-arm1176.a(syscalls.arm1176.o) (send_ipi)
+interrupts/interrupts-arm1176.a(irq_handler.arm1176.o)
+                              boot/boot-arm1176.a(boot-arm1176.o) (interrupt_handler)
+fs/files.arm1176.o            syscalls/syscalls-arm1176.a(syscalls.arm1176.o) (close)
+fs/romfs/romfs-arm1176.a(romfs.arm1176.o)
+                              fs/files.arm1176.o (romfs_stat)
+drivers/drivers.arm1176.o     kernel_main.arm1176.o (drivers_init_all)
+drivers/audio/audio.arm1176.a(pwm_audio.arm1176.o)
+                              kernel_main.arm1176.o (audio_pwm_init)
+drivers/bcm2835/bcm2835.arm1176.a(bcm2835_io.arm1176.o)
+                              syscalls/syscalls-arm1176.a(syscalls.arm1176.o) (bcm2835_write)
+drivers/block/block.arm1176.a(ramdisk.arm1176.o)
+                              fs/romfs/romfs-arm1176.a(romfs.arm1176.o) (ramdisk_read)
+drivers/console/console.arm1176.a(console_io.arm1176.o)
+                              fs/files.arm1176.o (console_write)
+drivers/framebuffer/framebuffer.arm1176.a(framebuffer.arm1176.o)
+                              drivers/drivers.arm1176.o (framebuffer_init)
+drivers/framebuffer/framebuffer.arm1176.a(framebuffer_console.arm1176.o)
+                              syscalls/syscalls-arm1176.a(syscalls.arm1176.o) (framebuffer_console_setfont)
+drivers/gpio/gpio.arm1176.a(gpio.arm1176.o)
+                              drivers/audio/audio.arm1176.a(pwm_audio.arm1176.o) (gpio_request)
+drivers/keyboard/keyboard.arm1176.a(ps2-keyboard.arm1176.o)
+                              interrupts/interrupts-arm1176.a(interrupts.arm1176.o) (ps2_interrupt_handler)
+drivers/led/led.arm1176.a(led.arm1176.o)
+                              drivers/drivers.arm1176.o (led_init)
+drivers/pmu/pmu.arm1176.a(arm1176-pmu.o)
+                              drivers/drivers.arm1176.o (pmu_init)
+drivers/random/random.arm1176.a(bcm2835_rng.arm1176.o)
+                              drivers/drivers.arm1176.o (bcm2835_rng_init)
+drivers/serial/serial.arm1176.a(serial.arm1176.o)
+                              kernel_main.arm1176.o (serial_init)
+drivers/thermal/thermal.arm1176.a(thermal.arm1176.o)
+                              syscalls/syscalls-arm1176.a(syscalls.arm1176.o) (thermal_read)
+drivers/timer/timer.arm1176.a(sp804_timer.arm1176.o)
+                              drivers/drivers.arm1176.o (timer_init)
+drivers/firmware/firmware.arm1176.a(mailbox.arm1176.o)
+                              drivers/framebuffer/framebuffer.arm1176.a(framebuffer.arm1176.o) (firmware_phys_to_bus_address)
+drivers/serial/serial.arm1176.a(pl011_uart.arm1176.o)
+                              drivers/serial/serial.arm1176.a(serial.arm1176.o) (pl011_uart_init)
+drivers/serial/serial.arm1176.a(mini_uart.arm1176.o)
+                              drivers/serial/serial.arm1176.a(serial.arm1176.o) (mini_uart_init)
+debug/debug-arm1176.a(panic.arm1176.o)
+                              drivers/console/console.arm1176.a(console_io.arm1176.o) (dump_saved_user_state)
+memory/memory-arm1176.a(arm1176-mmu.o)
+                              drivers/framebuffer/framebuffer.arm1176.a(framebuffer.arm1176.o) (flush_dcache)
+memory/memory-arm1176.a(memory.arm1176.o)
+                              syscalls/syscalls-arm1176.a(sysinfo.arm1176.o) (memory_total_free)
+processes/processes-arm1176.a(process.arm1176.o)
+                              syscalls/syscalls-arm1176.a(sysinfo.arm1176.o) (process_get_totals)
+processes/processes-arm1176.a(exec.arm1176.o)
+                              syscalls/syscalls-arm1176.a(syscalls.arm1176.o) (execve)
+processes/processes-arm1176.a(exit.arm1176.o)
+                              syscalls/syscalls-arm1176.a(syscalls.arm1176.o) (exit)
+processes/processes-arm1176.a(idle_task.arm1176.o)
+                              kernel_main.arm1176.o (create_idle_task)
+processes/processes-arm1176.a(scheduler.arm1176.o)
+                              syscalls/syscalls-arm1176.a(syscalls.arm1176.o) (schedule)
+processes/processes-arm1176.a(userspace.arm1176.o)
+                              kernel_main.arm1176.o (start_userspace)
+processes/processes-arm1176.a(vfork.arm1176.o)
+                              syscalls/syscalls-arm1176.a(syscalls.arm1176.o) (vfork)
+processes/processes-arm1176.a(waitpid.arm1176.o)
+                              processes/processes-arm1176.a(exit.arm1176.o) (waitpid_done)
+processes/processes-arm1176.a(waitqueue.arm1176.o)
+                              drivers/console/console.arm1176.a(console_io.arm1176.o) (wait_queue_add)
+time/time-arm1176.a(time.arm1176.o)
+                              syscalls/syscalls-arm1176.a(syscalls.arm1176.o) (time_since_boot)
+lib/lib-arm1176.a(locks.arm1176.o)
+                              drivers/console/console.arm1176.a(console_io.arm1176.o) (mutex_lock)
+lib/lib-arm1176.a(memcpy.arm1176.o)
+                              boot/boot-arm1176.a(device_tree.arm1176.o) (memcpy)
+lib/lib-arm1176.a(memset.arm1176.o)
+                              boot/boot-arm1176.a(atags.arm1176.o) (memset)
+lib/lib-arm1176.a(printk.arm1176.o)
+                              kernel_main.arm1176.o (printk)
+lib/lib-arm1176.a(smp.arm1176.o)
+                              syscalls/syscalls-arm1176.a(syscalls.arm1176.o) (get_cpu)
+lib/lib-arm1176.a(string.arm1176.o)
+                              boot/boot-arm1176.a(atags.arm1176.o) (strncmp)
+
+Allocating common symbols
+Common symbol       size              file
+
+page_table          0x4000            memory/memory-arm1176.a(arm1176-mmu.o)
+ramdisk_info        0xc               drivers/block/block.arm1176.a(ramdisk.arm1176.o)
+fd_table            0x180             fs/files.arm1176.o
+device_tree         0x2c              boot/boot-arm1176.a(device_tree.arm1176.o)
+superblock_table    0x40              fs/files.arm1176.o
+current_proc        0x4               processes/processes-arm1176.a(process.arm1176.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+                0x0000000000008000                . = 0x8000
+                0x0000000000008000                __start = .
+                0x0000000000008000                __text_start = .
+
+.text           0x0000000000008000     0x69b0
+ *(.text.boot)
+ .text.boot     0x0000000000008000       0xd8 boot/boot-arm1176.a(boot-arm1176.o)
+                0x0000000000008000                _start
+ *(.text)
+ .text          0x00000000000080d8      0x134 kernel_main.arm1176.o
+                0x00000000000080d8                kernel_main
+ .text          0x000000000000820c        0x0 boot/boot-arm1176.a(boot-arm1176.o)
+ .text          0x000000000000820c      0x484 boot/boot-arm1176.a(hardware_detect.arm1176.o)
+                0x000000000000832c                hardware_detect
+                0x00000000000083b0                hardware_print_model
+                0x00000000000085a4                hardware_print_commandline
+                0x0000000000008614                hardware_get_type
+                0x0000000000008624                hardware_get_memory
+ .text          0x0000000000008690      0x4b8 boot/boot-arm1176.a(atags.arm1176.o)
+                0x00000000000087ac                atags_dump
+                0x00000000000089c4                atags_detect
+                0x0000000000008b28                atags_get_memory
+                0x0000000000008b38                atags_get_revision
+ .text          0x0000000000008b48      0x890 boot/boot-arm1176.a(device_tree.arm1176.o)
+                0x0000000000008f50                devicetree_setup
+                0x0000000000009010                devicetree_find_reserved
+                0x0000000000009160                devicetree_find_string
+                0x00000000000091cc                devicetree_find_int
+                0x00000000000091e8                devicetree_get_memory
+ .text          0x00000000000093d8       0x40 syscalls/syscalls-arm1176.a(swi_handler.arm1176.o)
+                0x00000000000093d8                swi_handler
+ .text          0x0000000000009418      0x390 syscalls/syscalls-arm1176.a(syscalls.arm1176.o)
+                0x0000000000009418                swi_handler_c
+ .text          0x00000000000097a8       0x2c syscalls/syscalls-arm1176.a(getcpu.arm1176.o)
+                0x00000000000097a8                getcpu
+ .text          0x00000000000097d4       0x5c syscalls/syscalls-arm1176.a(nanosleep.arm1176.o)
+                0x00000000000097d4                nanosleep
+ .text          0x0000000000009830       0x70 syscalls/syscalls-arm1176.a(sysinfo.arm1176.o)
+                0x0000000000009830                sysinfo
+ .text          0x00000000000098a0       0x40 syscalls/syscalls-arm1176.a(times.arm1176.o)
+                0x00000000000098a0                times
+ .text          0x00000000000098e0       0x88 syscalls/syscalls-arm1176.a(uname.arm1176.o)
+                0x00000000000098e0                uname
+ .text          0x0000000000009968      0x2ec interrupts/interrupts-arm1176.a(interrupts.arm1176.o)
+                0x0000000000009968                irq_enable
+                0x00000000000099d0                irq_disable
+                0x0000000000009a38                interrupt_handler_c
+                0x0000000000009b38                fiq_handler
+                0x0000000000009b50                data_abort_handler
+                0x0000000000009bd0                prefetch_abort_handler
+                0x0000000000009c38                undef_handler
+ .text          0x0000000000009c54       0x10 interrupts/interrupts-arm1176.a(ipi.arm1176.o)
+                0x0000000000009c54                send_ipi
+ .text          0x0000000000009c64       0x44 interrupts/interrupts-arm1176.a(irq_handler.arm1176.o)
+                0x0000000000009c64                interrupt_handler
+ .text          0x0000000000009ca8      0x400 fs/files.arm1176.o
+                0x0000000000009ca8                fd_free
+                0x0000000000009cb0                fd_allocate
+                0x0000000000009d10                get_inode
+                0x0000000000009df4                close
+                0x0000000000009dfc                open
+                0x0000000000009e1c                read
+                0x0000000000009ea4                write
+                0x0000000000009edc                stat
+                0x0000000000009f04                mount
+                0x0000000000009f50                fd_table_init
+                0x0000000000009f84                getdents
+                0x0000000000009fec                chdir
+                0x000000000000a050                getcwd
+                0x000000000000a09c                statfs
+ .text          0x000000000000a0a8      0x650 fs/romfs/romfs-arm1176.a(romfs.arm1176.o)
+                0x000000000000a11c                romfs_stat
+                0x000000000000a270                romfs_get_inode
+                0x000000000000a380                romfs_mount
+                0x000000000000a41c                romfs_statfs
+                0x000000000000a4d0                romfs_read_file
+                0x000000000000a55c                romfs_getdents
+ .text          0x000000000000a6f8       0x68 drivers/drivers.arm1176.o
+                0x000000000000a6f8                drivers_init_all
+ .text          0x000000000000a760      0x118 drivers/audio/audio.arm1176.a(pwm_audio.arm1176.o)
+                0x000000000000a760                audio_pwm_init
+                0x000000000000a7fc                audio_pwm_write
+                0x000000000000a860                audio_beep
+ .text          0x000000000000a878       0x18 drivers/bcm2835/bcm2835.arm1176.a(bcm2835_io.arm1176.o)
+                0x000000000000a878                bcm2835_write
+                0x000000000000a884                bcm2835_read
+ .text          0x000000000000a890       0x88 drivers/block/block.arm1176.a(ramdisk.arm1176.o)
+                0x000000000000a890                ramdisk_read
+                0x000000000000a8e8                ramdisk_init
+ .text          0x000000000000a918      0x1e4 drivers/console/console.arm1176.a(console_io.arm1176.o)
+                0x000000000000a918                console_enable_locking
+                0x000000000000a92c                console_insert_char
+                0x000000000000a9e4                console_write
+                0x000000000000aa4c                console_read
+ .text          0x000000000000aafc      0x4ec drivers/framebuffer/framebuffer.arm1176.a(framebuffer.arm1176.o)
+                0x000000000000ab44                framebuffer_ready
+                0x000000000000ab54                framebuffer_init
+                0x000000000000ad20                framebuffer_hline
+                0x000000000000ad8c                framebuffer_vline
+                0x000000000000adec                framebuffer_clear_screen
+                0x000000000000ae6c                framebuffer_putpixel
+                0x000000000000aea0                framebuffer_push
+                0x000000000000aecc                framebuffer_gradient
+                0x000000000000af84                framebuffer_load
+ .text          0x000000000000afe8      0x98c drivers/framebuffer/framebuffer.arm1176.a(framebuffer_console.arm1176.o)
+                0x000000000000afe8                framebuffer_console_putchar
+                0x000000000000b0cc                framebuffer_console_clear
+                0x000000000000b11c                framebuffer_console_home
+                0x000000000000b138                framebuffer_console_push
+                0x000000000000b1e4                framebuffer_console_setfont
+                0x000000000000b21c                framebuffer_console_write
+                0x000000000000b91c                framebuffer_console_val
+                0x000000000000b944                framebuffer_console_init
+ .text          0x000000000000b974      0x35c drivers/gpio/gpio.arm1176.a(gpio.arm1176.o)
+                0x000000000000b974                gpio_request
+                0x000000000000ba1c                gpio_free
+                0x000000000000ba88                gpio_function_select
+                0x000000000000bafc                gpio_direction_input
+                0x000000000000bb04                gpio_direction_output
+                0x000000000000bb0c                gpio_to_irq
+                0x000000000000bb14                gpio_get_value
+                0x000000000000bb74                gpio_set_value
+                0x000000000000bc10                gpio_set_falling
+                0x000000000000bc78                gpio_clear_interrupt
+ .text          0x000000000000bcd0      0x2f8 drivers/keyboard/keyboard.arm1176.a(ps2-keyboard.arm1176.o)
+                0x000000000000bcd0                translate_key
+                0x000000000000bd64                ps2_interrupt_handler
+                0x000000000000bf0c                ps2_keyboard_init
+                0x000000000000bfa8                ps2_keyboard_cleanup
+ .text          0x000000000000bfc8      0x174 drivers/led/led.arm1176.a(led.arm1176.o)
+                0x000000000000bfc8                led_init
+                0x000000000000c0b8                led_on
+                0x000000000000c0fc                led_off
+ .text          0x000000000000c13c       0x18 drivers/pmu/pmu.arm1176.a(arm1176-pmu.o)
+                0x000000000000c13c                pmu_init
+                0x000000000000c14c                read_cycle_counter
+ .text          0x000000000000c154       0x98 drivers/random/random.arm1176.a(bcm2835_rng.arm1176.o)
+                0x000000000000c154                bcm2835_rng_init
+                0x000000000000c17c                bcm2835_rng_exit
+                0x000000000000c194                bcm2835_rng_read
+ .text          0x000000000000c1ec      0x104 drivers/serial/serial.arm1176.a(serial.arm1176.o)
+                0x000000000000c1ec                serial_init
+                0x000000000000c248                serial_write
+                0x000000000000c2c0                serial_interrupt_handler
+                0x000000000000c2d0                serial_enable_interrupts
+                0x000000000000c2e0                serial_enable_locking
+ .text          0x000000000000c2f0       0xe4 drivers/thermal/thermal.arm1176.a(thermal.arm1176.o)
+                0x000000000000c2f0                thermal_read
+ .text          0x000000000000c3d4      0x13c drivers/timer/timer.arm1176.a(sp804_timer.arm1176.o)
+                0x000000000000c3d4                timer_init
+                0x000000000000c434                timer_interrupt_handler
+                0x000000000000c4cc                timer_sleep_until
+ .text          0x000000000000c510      0x148 drivers/firmware/firmware.arm1176.a(mailbox.arm1176.o)
+                0x000000000000c510                firmware_phys_to_bus_address
+                0x000000000000c518                mailbox_write
+                0x000000000000c5bc                mailbox_read
+ .text          0x000000000000c658      0x2ec drivers/serial/serial.arm1176.a(pl011_uart.arm1176.o)
+                0x000000000000c658                pl011_uart_enable_locking
+                0x000000000000c65c                pl011_uart_putc
+                0x000000000000c690                pl011_uart_getc
+                0x000000000000c6bc                pl011_uart_getc_noblock
+                0x000000000000c6f0                pl011_uart_enable_interrupts
+                0x000000000000c770                pl011_uart_interrupt_handler
+                0x000000000000c7a0                pl011_uart_init
+                0x000000000000c910                pl011_uart_putc_extra
+ .text          0x000000000000c944      0x290 drivers/serial/serial.arm1176.a(mini_uart.arm1176.o)
+                0x000000000000c944                mini_uart_putc
+                0x000000000000c978                mini_uart_getc
+                0x000000000000c9a4                mini_uart_getc_noblock
+                0x000000000000c9d8                mini_uart_enable_interrupts
+                0x000000000000ca58                mini_uart_interrupt_handler
+                0x000000000000ca88                mini_uart_init
+ .text          0x000000000000cbd4      0x224 debug/debug-arm1176.a(panic.arm1176.o)
+                0x000000000000cbd4                dump_saved_user_state
+                0x000000000000cc78                dump_saved_kernel_state
+                0x000000000000cd08                dump_kernel_regs
+                0x000000000000cd98                dump_memory
+ .text          0x000000000000cdf8      0x244 memory/memory-arm1176.a(arm1176-mmu.o)
+                0x000000000000cdf8                setup_pagetable
+                0x000000000000cec0                enable_mmu
+                0x000000000000cee8                enable_l1_dcache
+                0x000000000000cef8                disable_l1_dcache
+                0x000000000000cefc                enable_l1_icache
+                0x000000000000cf0c                disable_l1_icache
+                0x000000000000cf1c                enable_branch_predictor
+                0x000000000000cf2c                disable_branch_predictor
+                0x000000000000cf3c                l1_cache_detect
+                0x000000000000cfd8                flush_icache
+                0x000000000000d02c                flush_dcache
+ .text          0x000000000000d03c      0x408 memory/memory-arm1176.a(memory.arm1176.o)
+                0x000000000000d03c                memory_total_free
+                0x000000000000d094                memory_allocate
+                0x000000000000d1e8                memory_free
+                0x000000000000d274                memory_get_total
+                0x000000000000d284                memory_hierarchy_init
+ .text          0x000000000000d444      0x320 processes/processes-arm1176.a(process.arm1176.o)
+                0x000000000000d444                process_get_totals
+                0x000000000000d484                process_lookup
+                0x000000000000d4c8                process_lookup_child
+                0x000000000000d504                process_create
+                0x000000000000d634                process_destroy
+                0x000000000000d6fc                process_save
+                0x000000000000d720                process_switch
+ .text          0x000000000000d764      0x390 processes/processes-arm1176.a(exec.arm1176.o)
+                0x000000000000d764                execve
+ .text          0x000000000000daf4       0x28 processes/processes-arm1176.a(exit.arm1176.o)
+                0x000000000000daf4                exit
+ .text          0x000000000000db1c       0xe0 processes/processes-arm1176.a(idle_task.arm1176.o)
+                0x000000000000db54                create_idle_task
+ .text          0x000000000000dbfc       0xc0 processes/processes-arm1176.a(scheduler.arm1176.o)
+                0x000000000000dbfc                schedule
+                0x000000000000dcac                sched_yield
+ .text          0x000000000000dcbc       0xcc processes/processes-arm1176.a(userspace.arm1176.o)
+                0x000000000000dcbc                enter_userspace
+                0x000000000000dcec                start_userspace
+ .text          0x000000000000dd88       0xa4 processes/processes-arm1176.a(vfork.arm1176.o)
+                0x000000000000dd88                vfork
+ .text          0x000000000000de2c       0xf4 processes/processes-arm1176.a(waitpid.arm1176.o)
+                0x000000000000de2c                waitpid_done
+                0x000000000000de44                waitpid
+ .text          0x000000000000df20       0x9c processes/processes-arm1176.a(waitqueue.arm1176.o)
+                0x000000000000df20                wait_queue_add
+                0x000000000000df84                wait_queue_wake
+ .text          0x000000000000dfbc       0x60 time/time-arm1176.a(time.arm1176.o)
+                0x000000000000dfbc                time_since_boot
+                0x000000000000dfd0                ticks_since_boot
+                0x000000000000dfe0                clock_gettime
+ .text          0x000000000000e01c       0x40 lib/lib-arm1176.a(locks.arm1176.o)
+                0x000000000000e01c                mutex_lock
+                0x000000000000e048                mutex_unlock
+ .text          0x000000000000e05c       0x7c lib/lib-arm1176.a(memcpy.arm1176.o)
+                0x000000000000e05c                memcpy
+                0x000000000000e084                memcpy_4byte
+ .text          0x000000000000e0d8      0x158 lib/lib-arm1176.a(memset.arm1176.o)
+                0x000000000000e0d8                memset_byte
+                0x000000000000e0fc                memset_4byte
+                0x000000000000e190                memset
+ .text          0x000000000000e230      0x4b4 lib/lib-arm1176.a(printk.arm1176.o)
+                0x000000000000e230                vsprintf
+                0x000000000000e618                printk
+                0x000000000000e660                serial_printk
+                0x000000000000e6a8                sprintf
+ .text          0x000000000000e6e4        0x8 lib/lib-arm1176.a(smp.arm1176.o)
+                0x000000000000e6e4                get_cpu
+ .text          0x000000000000e6ec      0x2c4 lib/lib-arm1176.a(string.arm1176.o)
+                0x000000000000e6ec                strncmp
+                0x000000000000e754                memcmp
+                0x000000000000e7c4                strncpy
+                0x000000000000e85c                strlcpy
+                0x000000000000e8e8                strncat
+                0x000000000000e980                strlen
+
+.glue_7         0x000000000000e9b0        0x0
+ .glue_7        0x000000000000e9b0        0x0 linker stubs
+
+.glue_7t        0x000000000000e9b0        0x0
+ .glue_7t       0x000000000000e9b0        0x0 linker stubs
+
+.vfp11_veneer   0x000000000000e9b0        0x0
+ .vfp11_veneer  0x000000000000e9b0        0x0 linker stubs
+
+.v4_bx          0x000000000000e9b0        0x0
+ .v4_bx         0x000000000000e9b0        0x0 linker stubs
+
+.iplt           0x000000000000e9b0        0x0
+ .iplt          0x000000000000e9b0        0x0 kernel_main.arm1176.o
+                0x000000000000f000                . = ALIGN (0x1000)
+                0x000000000000f000                __text_end = .
+                0x000000000000f000                __rodata_start = .
+
+.rodata         0x000000000000f000      0x160
+ *(.rodata)
+ .rodata        0x000000000000f000       0x40 drivers/framebuffer/framebuffer.arm1176.a(framebuffer_console.arm1176.o)
+ .rodata        0x000000000000f040      0x100 drivers/keyboard/keyboard.arm1176.a(ps2-keyboard.arm1176.o)
+ .rodata        0x000000000000f140       0x20 memory/memory-arm1176.a(arm1176-mmu.o)
+
+.rodata.str1.4  0x000000000000f160     0x13a8
+ .rodata.str1.4
+                0x000000000000f160      0x17a kernel_main.arm1176.o
+ *fill*         0x000000000000f2da        0x2 
+ .rodata.str1.4
+                0x000000000000f2dc      0x152 boot/boot-arm1176.a(hardware_detect.arm1176.o)
+                                        0x15a (size before relaxing)
+ *fill*         0x000000000000f42e        0x2 
+ .rodata.str1.4
+                0x000000000000f430      0x1ec boot/boot-arm1176.a(atags.arm1176.o)
+                                        0x1f0 (size before relaxing)
+ .rodata.str1.4
+                0x000000000000f61c      0x259 boot/boot-arm1176.a(device_tree.arm1176.o)
+ *fill*         0x000000000000f875        0x3 
+ .rodata.str1.4
+                0x000000000000f878       0x60 syscalls/syscalls-arm1176.a(syscalls.arm1176.o)
+ .rodata.str1.4
+                0x000000000000f8d8       0x39 syscalls/syscalls-arm1176.a(uname.arm1176.o)
+                                         0x45 (size before relaxing)
+ *fill*         0x000000000000f911        0x3 
+ .rodata.str1.4
+                0x000000000000f914      0x113 interrupts/interrupts-arm1176.a(interrupts.arm1176.o)
+ *fill*         0x000000000000fa27        0x1 
+ .rodata.str1.4
+                0x000000000000fa28       0x8b fs/files.arm1176.o
+                                         0x93 (size before relaxing)
+ *fill*         0x000000000000fab3        0x1 
+ .rodata.str1.4
+                0x000000000000fab4       0x59 fs/romfs/romfs-arm1176.a(romfs.arm1176.o)
+ *fill*         0x000000000000fb0d        0x3 
+ .rodata.str1.4
+                0x000000000000fb10       0x1b drivers/drivers.arm1176.o
+ *fill*         0x000000000000fb2b        0x1 
+ .rodata.str1.4
+                0x000000000000fb2c        0xd drivers/audio/audio.arm1176.a(pwm_audio.arm1176.o)
+ *fill*         0x000000000000fb39        0x3 
+ .rodata.str1.4
+                0x000000000000fb3c       0x57 drivers/block/block.arm1176.a(ramdisk.arm1176.o)
+ *fill*         0x000000000000fb93        0x1 
+ .rodata.str1.4
+                0x000000000000fb94      0x132 drivers/framebuffer/framebuffer.arm1176.a(framebuffer.arm1176.o)
+ *fill*         0x000000000000fcc6        0x2 
+ .rodata.str1.4
+                0x000000000000fcc8       0x62 drivers/framebuffer/framebuffer.arm1176.a(framebuffer_console.arm1176.o)
+ *fill*         0x000000000000fd2a        0x2 
+ .rodata.str1.4
+                0x000000000000fd2c       0x7b drivers/gpio/gpio.arm1176.a(gpio.arm1176.o)
+ *fill*         0x000000000000fda7        0x1 
+ .rodata.str1.4
+                0x000000000000fda8       0xa2 drivers/keyboard/keyboard.arm1176.a(ps2-keyboard.arm1176.o)
+ *fill*         0x000000000000fe4a        0x2 
+ .rodata.str1.4
+                0x000000000000fe4c       0x56 drivers/led/led.arm1176.a(led.arm1176.o)
+ *fill*         0x000000000000fea2        0x2 
+ .rodata.str1.4
+                0x000000000000fea4       0x67 drivers/thermal/thermal.arm1176.a(thermal.arm1176.o)
+ *fill*         0x000000000000ff0b        0x1 
+ .rodata.str1.4
+                0x000000000000ff0c      0x11d drivers/firmware/firmware.arm1176.a(mailbox.arm1176.o)
+ *fill*         0x0000000000010029        0x3 
+ .rodata.str1.4
+                0x000000000001002c       0x40 drivers/serial/serial.arm1176.a(pl011_uart.arm1176.o)
+ .rodata.str1.4
+                0x000000000001006c       0x40 drivers/serial/serial.arm1176.a(mini_uart.arm1176.o)
+ .rodata.str1.4
+                0x000000000001006c       0xfc debug/debug-arm1176.a(panic.arm1176.o)
+                                        0x100 (size before relaxing)
+ .rodata.str1.4
+                0x0000000000010168       0x95 memory/memory-arm1176.a(arm1176-mmu.o)
+ *fill*         0x00000000000101fd        0x3 
+ .rodata.str1.4
+                0x0000000000010200      0x160 memory/memory-arm1176.a(memory.arm1176.o)
+ .rodata.str1.4
+                0x0000000000010360       0x8d processes/processes-arm1176.a(process.arm1176.o)
+ *fill*         0x00000000000103ed        0x3 
+ .rodata.str1.4
+                0x00000000000103f0       0x5f processes/processes-arm1176.a(exec.arm1176.o)
+ *fill*         0x000000000001044f        0x1 
+ .rodata.str1.4
+                0x0000000000010450       0x39 processes/processes-arm1176.a(idle_task.arm1176.o)
+ *fill*         0x0000000000010489        0x3 
+ .rodata.str1.4
+                0x000000000001048c       0x32 processes/processes-arm1176.a(userspace.arm1176.o)
+                                         0x36 (size before relaxing)
+ *fill*         0x00000000000104be        0x2 
+ .rodata.str1.4
+                0x00000000000104c0       0x17 processes/processes-arm1176.a(vfork.arm1176.o)
+ *fill*         0x00000000000104d7        0x1 
+ .rodata.str1.4
+                0x00000000000104d8       0x30 processes/processes-arm1176.a(waitpid.arm1176.o)
+                                         0x2d (size before relaxing)
+
+.rel.dyn        0x0000000000010508        0x0
+ .rel.iplt      0x0000000000010508        0x0 kernel_main.arm1176.o
+                0x0000000000011000                . = ALIGN (0x1000)
+                0x0000000000011000                __rodata_end = .
+                0x0000000000011000                __data_start = .
+
+.data           0x0000000000011000    0x2bc2c
+ *(.data)
+ .data          0x0000000000011000    0x2ac00 kernel_main.arm1176.o
+                0x0000000000011000                initrd_image
+ .data          0x000000000003bc00        0x0 boot/boot-arm1176.a(boot-arm1176.o)
+ .data          0x000000000003bc00        0x4 boot/boot-arm1176.a(hardware_detect.arm1176.o)
+ .data          0x000000000003bc04        0x0 boot/boot-arm1176.a(atags.arm1176.o)
+ .data          0x000000000003bc04        0x0 boot/boot-arm1176.a(device_tree.arm1176.o)
+ .data          0x000000000003bc04        0x0 syscalls/syscalls-arm1176.a(swi_handler.arm1176.o)
+ .data          0x000000000003bc04        0x0 syscalls/syscalls-arm1176.a(syscalls.arm1176.o)
+ .data          0x000000000003bc04        0x0 syscalls/syscalls-arm1176.a(getcpu.arm1176.o)
+ .data          0x000000000003bc04        0x0 syscalls/syscalls-arm1176.a(nanosleep.arm1176.o)
+ .data          0x000000000003bc04        0x0 syscalls/syscalls-arm1176.a(sysinfo.arm1176.o)
+ .data          0x000000000003bc04        0x0 syscalls/syscalls-arm1176.a(times.arm1176.o)
+ .data          0x000000000003bc04        0x0 syscalls/syscalls-arm1176.a(uname.arm1176.o)
+ .data          0x000000000003bc04        0x0 interrupts/interrupts-arm1176.a(interrupts.arm1176.o)
+ .data          0x000000000003bc04        0x0 interrupts/interrupts-arm1176.a(ipi.arm1176.o)
+ .data          0x000000000003bc04        0x0 interrupts/interrupts-arm1176.a(irq_handler.arm1176.o)
+ .data          0x000000000003bc04        0x0 fs/files.arm1176.o
+ .data          0x000000000003bc04        0x0 fs/romfs/romfs-arm1176.a(romfs.arm1176.o)
+ .data          0x000000000003bc04        0x0 drivers/drivers.arm1176.o
+ .data          0x000000000003bc04        0x0 drivers/audio/audio.arm1176.a(pwm_audio.arm1176.o)
+ .data          0x000000000003bc04        0x0 drivers/bcm2835/bcm2835.arm1176.a(bcm2835_io.arm1176.o)
+ .data          0x000000000003bc04        0x0 drivers/block/block.arm1176.a(ramdisk.arm1176.o)
+ .data          0x000000000003bc04        0x0 drivers/console/console.arm1176.a(console_io.arm1176.o)
+ .data          0x000000000003bc04        0x0 drivers/framebuffer/framebuffer.arm1176.a(framebuffer.arm1176.o)
+ .data          0x000000000003bc04     0x1010 drivers/framebuffer/framebuffer.arm1176.a(framebuffer_console.arm1176.o)
+                0x000000000003bc0c                default_font
+ .data          0x000000000003cc14        0x0 drivers/gpio/gpio.arm1176.a(gpio.arm1176.o)
+ .data          0x000000000003cc14        0x8 drivers/keyboard/keyboard.arm1176.a(ps2-keyboard.arm1176.o)
+                0x000000000003cc14                gpio_data
+                0x000000000003cc18                gpio_clk
+ .data          0x000000000003cc1c        0x8 drivers/led/led.arm1176.a(led.arm1176.o)
+ .data          0x000000000003cc24        0x0 drivers/pmu/pmu.arm1176.a(arm1176-pmu.o)
+ .data          0x000000000003cc24        0x0 drivers/random/random.arm1176.a(bcm2835_rng.arm1176.o)
+ .data          0x000000000003cc24        0x0 drivers/serial/serial.arm1176.a(serial.arm1176.o)
+ .data          0x000000000003cc24        0x0 drivers/thermal/thermal.arm1176.a(thermal.arm1176.o)
+ .data          0x000000000003cc24        0x4 drivers/timer/timer.arm1176.a(sp804_timer.arm1176.o)
+                0x000000000003cc24                blinking_enabled
+ .data          0x000000000003cc28        0x0 drivers/firmware/firmware.arm1176.a(mailbox.arm1176.o)
+ .data          0x000000000003cc28        0x0 drivers/serial/serial.arm1176.a(pl011_uart.arm1176.o)
+ .data          0x000000000003cc28        0x0 drivers/serial/serial.arm1176.a(mini_uart.arm1176.o)
+ .data          0x000000000003cc28        0x0 debug/debug-arm1176.a(panic.arm1176.o)
+ .data          0x000000000003cc28        0x0 memory/memory-arm1176.a(arm1176-mmu.o)
+ .data          0x000000000003cc28        0x0 memory/memory-arm1176.a(memory.arm1176.o)
+ .data          0x000000000003cc28        0x0 processes/processes-arm1176.a(process.arm1176.o)
+ .data          0x000000000003cc28        0x0 processes/processes-arm1176.a(exec.arm1176.o)
+ .data          0x000000000003cc28        0x0 processes/processes-arm1176.a(exit.arm1176.o)
+ .data          0x000000000003cc28        0x0 processes/processes-arm1176.a(idle_task.arm1176.o)
+ .data          0x000000000003cc28        0x4 processes/processes-arm1176.a(scheduler.arm1176.o)
+                0x000000000003cc28                scheduling_enabled
+ .data          0x000000000003cc2c        0x0 processes/processes-arm1176.a(userspace.arm1176.o)
+ .data          0x000000000003cc2c        0x0 processes/processes-arm1176.a(vfork.arm1176.o)
+ .data          0x000000000003cc2c        0x0 processes/processes-arm1176.a(waitpid.arm1176.o)
+ .data          0x000000000003cc2c        0x0 processes/processes-arm1176.a(waitqueue.arm1176.o)
+ .data          0x000000000003cc2c        0x0 time/time-arm1176.a(time.arm1176.o)
+ .data          0x000000000003cc2c        0x0 lib/lib-arm1176.a(locks.arm1176.o)
+ .data          0x000000000003cc2c        0x0 lib/lib-arm1176.a(memcpy.arm1176.o)
+ .data          0x000000000003cc2c        0x0 lib/lib-arm1176.a(memset.arm1176.o)
+ .data          0x000000000003cc2c        0x0 lib/lib-arm1176.a(printk.arm1176.o)
+ .data          0x000000000003cc2c        0x0 lib/lib-arm1176.a(smp.arm1176.o)
+ .data          0x000000000003cc2c        0x0 lib/lib-arm1176.a(string.arm1176.o)
+
+.igot.plt       0x000000000003cc2c        0x0
+ .igot.plt      0x000000000003cc2c        0x0 kernel_main.arm1176.o
+                0x000000000003d000                . = ALIGN (0x1000)
+                0x000000000003d000                __data_end = .
+                0x000000000003d000                __bss_start = .
+
+.bss            0x0000000000040000    0x30004
+                0x0000000000040000                bss = .
+ *(.bss)
+ .bss           0x0000000000040000        0x0 kernel_main.arm1176.o
+ .bss           0x0000000000040000        0x0 boot/boot-arm1176.a(boot-arm1176.o)
+ .bss           0x0000000000040000      0x40c boot/boot-arm1176.a(hardware_detect.arm1176.o)
+ .bss           0x000000000004040c       0x14 boot/boot-arm1176.a(atags.arm1176.o)
+ .bss           0x0000000000040420        0x0 boot/boot-arm1176.a(device_tree.arm1176.o)
+ .bss           0x0000000000040420        0x0 syscalls/syscalls-arm1176.a(swi_handler.arm1176.o)
+ .bss           0x0000000000040420        0x0 syscalls/syscalls-arm1176.a(syscalls.arm1176.o)
+ .bss           0x0000000000040420        0x0 syscalls/syscalls-arm1176.a(getcpu.arm1176.o)
+ .bss           0x0000000000040420        0x0 syscalls/syscalls-arm1176.a(nanosleep.arm1176.o)
+ .bss           0x0000000000040420        0x0 syscalls/syscalls-arm1176.a(sysinfo.arm1176.o)
+ .bss           0x0000000000040420        0x0 syscalls/syscalls-arm1176.a(times.arm1176.o)
+ .bss           0x0000000000040420        0x0 syscalls/syscalls-arm1176.a(uname.arm1176.o)
+ .bss           0x0000000000040420        0x0 interrupts/interrupts-arm1176.a(interrupts.arm1176.o)
+ .bss           0x0000000000040420        0x0 interrupts/interrupts-arm1176.a(ipi.arm1176.o)
+ .bss           0x0000000000040420        0x0 interrupts/interrupts-arm1176.a(irq_handler.arm1176.o)
+ .bss           0x0000000000040420        0x4 fs/files.arm1176.o
+ .bss           0x0000000000040424        0x0 fs/romfs/romfs-arm1176.a(romfs.arm1176.o)
+ .bss           0x0000000000040424        0x0 drivers/drivers.arm1176.o
+ .bss           0x0000000000040424        0x0 drivers/audio/audio.arm1176.a(pwm_audio.arm1176.o)
+ .bss           0x0000000000040424        0x0 drivers/bcm2835/bcm2835.arm1176.a(bcm2835_io.arm1176.o)
+ .bss           0x0000000000040424        0x0 drivers/block/block.arm1176.a(ramdisk.arm1176.o)
+ .bss           0x0000000000040424      0x118 drivers/console/console.arm1176.a(console_io.arm1176.o)
+                0x0000000000040534                console_wait_queue
+ .bss           0x000000000004053c       0x30 drivers/framebuffer/framebuffer.arm1176.a(framebuffer.arm1176.o)
+ .bss           0x000000000004056c     0x1624 drivers/framebuffer/framebuffer.arm1176.a(framebuffer_console.arm1176.o)
+ .bss           0x0000000000041b90        0x8 drivers/gpio/gpio.arm1176.a(gpio.arm1176.o)
+ .bss           0x0000000000041b98       0x2c drivers/keyboard/keyboard.arm1176.a(ps2-keyboard.arm1176.o)
+ .bss           0x0000000000041bc4        0x4 drivers/led/led.arm1176.a(led.arm1176.o)
+ .bss           0x0000000000041bc8        0x0 drivers/pmu/pmu.arm1176.a(arm1176-pmu.o)
+ .bss           0x0000000000041bc8        0x0 drivers/random/random.arm1176.a(bcm2835_rng.arm1176.o)
+ .bss           0x0000000000041bc8       0x2c drivers/serial/serial.arm1176.a(serial.arm1176.o)
+ .bss           0x0000000000041bf4        0x0 drivers/thermal/thermal.arm1176.a(thermal.arm1176.o)
+ .bss           0x0000000000041bf4       0x10 drivers/timer/timer.arm1176.a(sp804_timer.arm1176.o)
+                0x0000000000041bf4                tick_counter
+ .bss           0x0000000000041c04        0x0 drivers/firmware/firmware.arm1176.a(mailbox.arm1176.o)
+ .bss           0x0000000000041c04        0x0 drivers/serial/serial.arm1176.a(pl011_uart.arm1176.o)
+ .bss           0x0000000000041c04        0x0 drivers/serial/serial.arm1176.a(mini_uart.arm1176.o)
+ .bss           0x0000000000041c04        0x0 debug/debug-arm1176.a(panic.arm1176.o)
+ .bss           0x0000000000041c04        0x0 memory/memory-arm1176.a(arm1176-mmu.o)
+ .bss           0x0000000000041c04     0x800c memory/memory-arm1176.a(memory.arm1176.o)
+ *fill*         0x0000000000049c10      0x3f0 
+ .bss           0x000000000004a000    0x21008 processes/processes-arm1176.a(process.arm1176.o)
+                0x000000000004a000                proc_first
+                0x000000000006b004                userspace_started
+ .bss           0x000000000006b008        0x0 processes/processes-arm1176.a(exec.arm1176.o)
+ .bss           0x000000000006b008        0x0 processes/processes-arm1176.a(exit.arm1176.o)
+ .bss           0x000000000006b008        0x0 processes/processes-arm1176.a(idle_task.arm1176.o)
+ .bss           0x000000000006b008        0x0 processes/processes-arm1176.a(scheduler.arm1176.o)
+ .bss           0x000000000006b008        0x0 processes/processes-arm1176.a(userspace.arm1176.o)
+ .bss           0x000000000006b008        0x0 processes/processes-arm1176.a(vfork.arm1176.o)
+ .bss           0x000000000006b008        0x4 processes/processes-arm1176.a(waitpid.arm1176.o)
+                0x000000000006b008                waitpid_wait_queue
+ .bss           0x000000000006b00c        0x0 processes/processes-arm1176.a(waitqueue.arm1176.o)
+ .bss           0x000000000006b00c        0x0 time/time-arm1176.a(time.arm1176.o)
+ .bss           0x000000000006b00c        0x0 lib/lib-arm1176.a(locks.arm1176.o)
+ .bss           0x000000000006b00c        0x0 lib/lib-arm1176.a(memcpy.arm1176.o)
+ .bss           0x000000000006b00c        0x0 lib/lib-arm1176.a(memset.arm1176.o)
+ .bss           0x000000000006b00c        0x0 lib/lib-arm1176.a(printk.arm1176.o)
+ .bss           0x000000000006b00c        0x0 lib/lib-arm1176.a(smp.arm1176.o)
+ .bss           0x000000000006b00c        0x0 lib/lib-arm1176.a(string.arm1176.o)
+ COMMON         0x000000000006b00c       0x2c boot/boot-arm1176.a(device_tree.arm1176.o)
+                0x000000000006b00c                device_tree
+ COMMON         0x000000000006b038      0x1c0 fs/files.arm1176.o
+                0x000000000006b038                fd_table
+                0x000000000006b1b8                superblock_table
+ COMMON         0x000000000006b1f8        0xc drivers/block/block.arm1176.a(ramdisk.arm1176.o)
+                0x000000000006b1f8                ramdisk_info
+ *fill*         0x000000000006b204      0xdfc 
+ COMMON         0x000000000006c000     0x4000 memory/memory-arm1176.a(arm1176-mmu.o)
+                0x000000000006c000                page_table
+ COMMON         0x0000000000070000        0x4 processes/processes-arm1176.a(process.arm1176.o)
+                0x0000000000070000                current_proc
+                0x0000000000071000                . = ALIGN (0x1000)
+                0x0000000000071000                __bss_end = .
+                0x0000000000071000                __end = .
+LOAD kernel_main.arm1176.o
+LOAD boot/boot-arm1176.a
+LOAD syscalls/syscalls-arm1176.a
+LOAD interrupts/interrupts-arm1176.a
+LOAD fs/fs-arm1176.a
+LOAD drivers/drivers-arm1176.a
+LOAD debug/debug-arm1176.a
+LOAD memory/memory-arm1176.a
+LOAD processes/processes-arm1176.a
+LOAD time/time-arm1176.a
+LOAD lib/lib-arm1176.a
+OUTPUT(kernel.elf elf32-littlearm)
+
+.comment        0x0000000000000000       0x31
+ .comment       0x0000000000000000       0x31 kernel_main.arm1176.o
+                                         0x32 (size before relaxing)
+ .comment       0x0000000000000031       0x32 boot/boot-arm1176.a(hardware_detect.arm1176.o)
+ .comment       0x0000000000000031       0x32 boot/boot-arm1176.a(atags.arm1176.o)
+ .comment       0x0000000000000031       0x32 boot/boot-arm1176.a(device_tree.arm1176.o)
+ .comment       0x0000000000000031       0x32 syscalls/syscalls-arm1176.a(syscalls.arm1176.o)
+ .comment       0x0000000000000031       0x32 syscalls/syscalls-arm1176.a(getcpu.arm1176.o)
+ .comment       0x0000000000000031       0x32 syscalls/syscalls-arm1176.a(nanosleep.arm1176.o)
+ .comment       0x0000000000000031       0x32 syscalls/syscalls-arm1176.a(sysinfo.arm1176.o)
+ .comment       0x0000000000000031       0x32 syscalls/syscalls-arm1176.a(times.arm1176.o)
+ .comment       0x0000000000000031       0x32 syscalls/syscalls-arm1176.a(uname.arm1176.o)
+ .comment       0x0000000000000031       0x32 interrupts/interrupts-arm1176.a(interrupts.arm1176.o)
+ .comment       0x0000000000000031       0x32 interrupts/interrupts-arm1176.a(ipi.arm1176.o)
+ .comment       0x0000000000000031       0x32 fs/files.arm1176.o
+ .comment       0x0000000000000031       0x32 fs/romfs/romfs-arm1176.a(romfs.arm1176.o)
+ .comment       0x0000000000000031       0x32 drivers/drivers.arm1176.o
+ .comment       0x0000000000000031       0x32 drivers/audio/audio.arm1176.a(pwm_audio.arm1176.o)
+ .comment       0x0000000000000031       0x32 drivers/bcm2835/bcm2835.arm1176.a(bcm2835_io.arm1176.o)
+ .comment       0x0000000000000031       0x32 drivers/block/block.arm1176.a(ramdisk.arm1176.o)
+ .comment       0x0000000000000031       0x32 drivers/console/console.arm1176.a(console_io.arm1176.o)
+ .comment       0x0000000000000031       0x32 drivers/framebuffer/framebuffer.arm1176.a(framebuffer.arm1176.o)
+ .comment       0x0000000000000031       0x32 drivers/framebuffer/framebuffer.arm1176.a(framebuffer_console.arm1176.o)
+ .comment       0x0000000000000031       0x32 drivers/gpio/gpio.arm1176.a(gpio.arm1176.o)
+ .comment       0x0000000000000031       0x32 drivers/keyboard/keyboard.arm1176.a(ps2-keyboard.arm1176.o)
+ .comment       0x0000000000000031       0x32 drivers/led/led.arm1176.a(led.arm1176.o)
+ .comment       0x0000000000000031       0x32 drivers/pmu/pmu.arm1176.a(arm1176-pmu.o)
+ .comment       0x0000000000000031       0x32 drivers/random/random.arm1176.a(bcm2835_rng.arm1176.o)
+ .comment       0x0000000000000031       0x32 drivers/serial/serial.arm1176.a(serial.arm1176.o)
+ .comment       0x0000000000000031       0x32 drivers/thermal/thermal.arm1176.a(thermal.arm1176.o)
+ .comment       0x0000000000000031       0x32 drivers/timer/timer.arm1176.a(sp804_timer.arm1176.o)
+ .comment       0x0000000000000031       0x32 drivers/firmware/firmware.arm1176.a(mailbox.arm1176.o)
+ .comment       0x0000000000000031       0x32 drivers/serial/serial.arm1176.a(pl011_uart.arm1176.o)
+ .comment       0x0000000000000031       0x32 drivers/serial/serial.arm1176.a(mini_uart.arm1176.o)
+ .comment       0x0000000000000031       0x32 debug/debug-arm1176.a(panic.arm1176.o)
+ .comment       0x0000000000000031       0x32 memory/memory-arm1176.a(arm1176-mmu.o)
+ .comment       0x0000000000000031       0x32 memory/memory-arm1176.a(memory.arm1176.o)
+ .comment       0x0000000000000031       0x32 processes/processes-arm1176.a(process.arm1176.o)
+ .comment       0x0000000000000031       0x32 processes/processes-arm1176.a(exec.arm1176.o)
+ .comment       0x0000000000000031       0x32 processes/processes-arm1176.a(exit.arm1176.o)
+ .comment       0x0000000000000031       0x32 processes/processes-arm1176.a(idle_task.arm1176.o)
+ .comment       0x0000000000000031       0x32 processes/processes-arm1176.a(scheduler.arm1176.o)
+ .comment       0x0000000000000031       0x32 processes/processes-arm1176.a(userspace.arm1176.o)
+ .comment       0x0000000000000031       0x32 processes/processes-arm1176.a(vfork.arm1176.o)
+ .comment       0x0000000000000031       0x32 processes/processes-arm1176.a(waitpid.arm1176.o)
+ .comment       0x0000000000000031       0x32 processes/processes-arm1176.a(waitqueue.arm1176.o)
+ .comment       0x0000000000000031       0x32 time/time-arm1176.a(time.arm1176.o)
+ .comment       0x0000000000000031       0x32 lib/lib-arm1176.a(memcpy.arm1176.o)
+ .comment       0x0000000000000031       0x32 lib/lib-arm1176.a(memset.arm1176.o)
+ .comment       0x0000000000000031       0x32 lib/lib-arm1176.a(printk.arm1176.o)
+ .comment       0x0000000000000031       0x32 lib/lib-arm1176.a(smp.arm1176.o)
+ .comment       0x0000000000000031       0x32 lib/lib-arm1176.a(string.arm1176.o)
+
+.ARM.attributes
+                0x0000000000000000       0x36
+ .ARM.attributes
+                0x0000000000000000       0x38 kernel_main.arm1176.o
+ .ARM.attributes
+                0x0000000000000038       0x26 boot/boot-arm1176.a(boot-arm1176.o)
+ .ARM.attributes
+                0x000000000000005e       0x38 boot/boot-arm1176.a(hardware_detect.arm1176.o)
+ .ARM.attributes
+                0x0000000000000096       0x38 boot/boot-arm1176.a(atags.arm1176.o)
+ .ARM.attributes
+                0x00000000000000ce       0x38 boot/boot-arm1176.a(device_tree.arm1176.o)
+ .ARM.attributes
+                0x0000000000000106       0x26 syscalls/syscalls-arm1176.a(swi_handler.arm1176.o)
+ .ARM.attributes
+                0x000000000000012c       0x38 syscalls/syscalls-arm1176.a(syscalls.arm1176.o)
+ .ARM.attributes
+                0x0000000000000164       0x38 syscalls/syscalls-arm1176.a(getcpu.arm1176.o)
+ .ARM.attributes
+                0x000000000000019c       0x38 syscalls/syscalls-arm1176.a(nanosleep.arm1176.o)
+ .ARM.attributes
+                0x00000000000001d4       0x38 syscalls/syscalls-arm1176.a(sysinfo.arm1176.o)
+ .ARM.attributes
+                0x000000000000020c       0x38 syscalls/syscalls-arm1176.a(times.arm1176.o)
+ .ARM.attributes
+                0x0000000000000244       0x38 syscalls/syscalls-arm1176.a(uname.arm1176.o)
+ .ARM.attributes
+                0x000000000000027c       0x38 interrupts/interrupts-arm1176.a(interrupts.arm1176.o)
+ .ARM.attributes
+                0x00000000000002b4       0x38 interrupts/interrupts-arm1176.a(ipi.arm1176.o)
+ .ARM.attributes
+                0x00000000000002ec       0x26 interrupts/interrupts-arm1176.a(irq_handler.arm1176.o)
+ .ARM.attributes
+                0x0000000000000312       0x38 fs/files.arm1176.o
+ .ARM.attributes
+                0x000000000000034a       0x38 fs/romfs/romfs-arm1176.a(romfs.arm1176.o)
+ .ARM.attributes
+                0x0000000000000382       0x38 drivers/drivers.arm1176.o
+ .ARM.attributes
+                0x00000000000003ba       0x38 drivers/audio/audio.arm1176.a(pwm_audio.arm1176.o)
+ .ARM.attributes
+                0x00000000000003f2       0x38 drivers/bcm2835/bcm2835.arm1176.a(bcm2835_io.arm1176.o)
+ .ARM.attributes
+                0x000000000000042a       0x38 drivers/block/block.arm1176.a(ramdisk.arm1176.o)
+ .ARM.attributes
+                0x0000000000000462       0x38 drivers/console/console.arm1176.a(console_io.arm1176.o)
+ .ARM.attributes
+                0x000000000000049a       0x38 drivers/framebuffer/framebuffer.arm1176.a(framebuffer.arm1176.o)
+ .ARM.attributes
+                0x00000000000004d2       0x38 drivers/framebuffer/framebuffer.arm1176.a(framebuffer_console.arm1176.o)
+ .ARM.attributes
+                0x000000000000050a       0x38 drivers/gpio/gpio.arm1176.a(gpio.arm1176.o)
+ .ARM.attributes
+                0x0000000000000542       0x38 drivers/keyboard/keyboard.arm1176.a(ps2-keyboard.arm1176.o)
+ .ARM.attributes
+                0x000000000000057a       0x38 drivers/led/led.arm1176.a(led.arm1176.o)
+ .ARM.attributes
+                0x00000000000005b2       0x38 drivers/pmu/pmu.arm1176.a(arm1176-pmu.o)
+ .ARM.attributes
+                0x00000000000005ea       0x38 drivers/random/random.arm1176.a(bcm2835_rng.arm1176.o)
+ .ARM.attributes
+                0x0000000000000622       0x38 drivers/serial/serial.arm1176.a(serial.arm1176.o)
+ .ARM.attributes
+                0x000000000000065a       0x38 drivers/thermal/thermal.arm1176.a(thermal.arm1176.o)
+ .ARM.attributes
+                0x0000000000000692       0x38 drivers/timer/timer.arm1176.a(sp804_timer.arm1176.o)
+ .ARM.attributes
+                0x00000000000006ca       0x38 drivers/firmware/firmware.arm1176.a(mailbox.arm1176.o)
+ .ARM.attributes
+                0x0000000000000702       0x38 drivers/serial/serial.arm1176.a(pl011_uart.arm1176.o)
+ .ARM.attributes
+                0x000000000000073a       0x38 drivers/serial/serial.arm1176.a(mini_uart.arm1176.o)
+ .ARM.attributes
+                0x0000000000000772       0x38 debug/debug-arm1176.a(panic.arm1176.o)
+ .ARM.attributes
+                0x00000000000007aa       0x38 memory/memory-arm1176.a(arm1176-mmu.o)
+ .ARM.attributes
+                0x00000000000007e2       0x38 memory/memory-arm1176.a(memory.arm1176.o)
+ .ARM.attributes
+                0x000000000000081a       0x38 processes/processes-arm1176.a(process.arm1176.o)
+ .ARM.attributes
+                0x0000000000000852       0x38 processes/processes-arm1176.a(exec.arm1176.o)
+ .ARM.attributes
+                0x000000000000088a       0x38 processes/processes-arm1176.a(exit.arm1176.o)
+ .ARM.attributes
+                0x00000000000008c2       0x38 processes/processes-arm1176.a(idle_task.arm1176.o)
+ .ARM.attributes
+                0x00000000000008fa       0x38 processes/processes-arm1176.a(scheduler.arm1176.o)
+ .ARM.attributes
+                0x0000000000000932       0x38 processes/processes-arm1176.a(userspace.arm1176.o)
+ .ARM.attributes
+                0x000000000000096a       0x38 processes/processes-arm1176.a(vfork.arm1176.o)
+ .ARM.attributes
+                0x00000000000009a2       0x38 processes/processes-arm1176.a(waitpid.arm1176.o)
+ .ARM.attributes
+                0x00000000000009da       0x38 processes/processes-arm1176.a(waitqueue.arm1176.o)
+ .ARM.attributes
+                0x0000000000000a12       0x38 time/time-arm1176.a(time.arm1176.o)
+ .ARM.attributes
+                0x0000000000000a4a       0x26 lib/lib-arm1176.a(locks.arm1176.o)
+ .ARM.attributes
+                0x0000000000000a70       0x38 lib/lib-arm1176.a(memcpy.arm1176.o)
+ .ARM.attributes
+                0x0000000000000aa8       0x38 lib/lib-arm1176.a(memset.arm1176.o)
+ .ARM.attributes
+                0x0000000000000ae0       0x38 lib/lib-arm1176.a(printk.arm1176.o)
+ .ARM.attributes
+                0x0000000000000b18       0x38 lib/lib-arm1176.a(smp.arm1176.o)
+ .ARM.attributes
+                0x0000000000000b50       0x38 lib/lib-arm1176.a(string.arm1176.o)
