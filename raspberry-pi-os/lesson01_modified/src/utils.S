@@ -13,3 +13,9 @@ delay:
 	subs x0, x0, #1
 	bne delay
 	ret
+
+.global getCPUId
+getCPUId:
+	mrs	x0, mpidr_el1		
+	and	x0, x0,#0xFF    // Check processor id
+	ret

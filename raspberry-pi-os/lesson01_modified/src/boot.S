@@ -19,8 +19,5 @@ master:
 	bl 	memzero
 
 	mov	sp, #LOW_MEMORY 
-	mrs	x0, mpidr_el1		
-	and	x0, x0,#0xFF    // Check processor id
-	PUSH {x0}
 	bl	kernel_main
 	b 	proc_hang		// should never come here
