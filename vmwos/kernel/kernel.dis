@@ -93,7 +93,7 @@ Disassembly of section .text:
     80f4:	e1a04a27 	lsr	r4, r7, #20
     80f8:	eb00008b 	bl	832c <hardware_detect>
     80fc:	e2844001 	add	r4, r4, #1
-    8100:	e3a00001 	mov	r0, #1
+    8100:	e3a00002 	mov	r0, #2
     8104:	eb001038 	bl	c1ec <serial_init>
     8108:	e1a04a04 	lsl	r4, r4, #20
     810c:	e59f00b8 	ldr	r0, [pc, #184]	; 81cc <kernel_main+0xf4>
@@ -7790,11 +7790,11 @@ Disassembly of section .rodata.str1.4:
     f8d8:	4f776d76 	svcmi	0x00776d76
     f8dc:	00000053 	andeq	r0, r0, r3, asr r0
     f8e0:	00006970 	andeq	r6, r0, r0, ror r9
-    f8e4:	20646557 	rsbcs	r6, r4, r7, asr r5
+    f8e4:	20756854 	rsbscs	r6, r5, r4, asr r8
     f8e8:	20727041 	rsbscs	r7, r2, r1, asr #32
-    f8ec:	32203320 	eorcc	r3, r0, #32, 6	; 0x80000000
-    f8f0:	38353a33 	ldmdacc	r5!, {r0, r1, r4, r5, r9, fp, ip, sp}
-    f8f4:	2035333a 	eorscs	r3, r5, sl, lsr r3
+    f8ec:	30203420 	eorcc	r3, r0, r0, lsr #8
+    f8f0:	33313a30 	teqcc	r1, #48, 20	; 0x30000
+    f8f4:	2035313a 	eorscs	r3, r5, sl, lsr r1
     f8f8:	20544445 	subscs	r4, r4, r5, asr #8
     f8fc:	39313032 	ldmdbcc	r1!, {r1, r4, r5, ip, sp}
     f900:	00000000 	andeq	r0, r0, r0
