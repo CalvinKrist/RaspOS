@@ -1,4 +1,5 @@
 #include "mini_uart.h"
+#include "utils.h"
 
 void cpu_main(void)
 {
