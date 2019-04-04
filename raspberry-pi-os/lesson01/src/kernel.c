@@ -7,6 +7,5 @@ void kernel_main(void)
 
 	while (1) {
 		uart_send(uart_recv());
-		uart_send_string("Hello, world!\r\n");
 	}
 }
