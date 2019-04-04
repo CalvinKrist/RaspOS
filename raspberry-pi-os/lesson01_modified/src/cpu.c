@@ -1,8 +1,8 @@
 #include "mini_uart.h"
 
-void kernel_main(void)
+void cpu_main(void)
 {
-	uart_init();
+	delay(3000);
 	uart_send_string("Hello, world from processor ");
 	
 	unsigned int cpuId = getCPUId();
@@ -11,8 +11,4 @@ void kernel_main(void)
 	else
 		uart_send('n');
 	uart_send('\r\n');
-
-	while (1) {
-		uart_send(uart_recv());
-	}
 }
