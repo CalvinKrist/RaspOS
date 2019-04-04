@@ -46,7 +46,7 @@ void kernel_main(uint32_t r0, uint32_t r1, uint32_t r2,
 	/*****************************/
 
 	/* Serial console is most important so do that first */
-	serial_init(SERIAL_UART_PL011);
+	serial_init(SERIAL_UART_MINI);
 	serial_printk("\n\n\nUsing pl011-uart\n");
 
 	/**************************/
