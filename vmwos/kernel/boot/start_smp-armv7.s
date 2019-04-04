@@ -95,7 +95,8 @@ done_pi2:
 	/* core3 = 0x0ff 5000 - 0x0ff 4000 */
 	/* (0xff8 - core)<<12 */
 
-	mov	r0,#0xff8
+	mov	r0,#0xff0
+	add	r0,#0x008
 	sub	r0,r3
 	lsl	r0,#12
 	mov	sp,r0
@@ -108,7 +109,8 @@ done_pi2:
 	mov	r1, #(CPSR_MODE_ABORT | CPSR_MODE_IRQ_DISABLE | CPSR_MODE_FIQ_DISABLE )
 	msr	cpsr_c, r1
 
-	mov	r0,#0xff8
+	mov	r0,#0xff0
+	mov	r0,#0x008
 	sub	r0,r3
 	lsl	r0,#12
 	mov	sp,r0
@@ -127,7 +129,8 @@ done_pi2:
 	/* core3 = 0x0ff 9000 - 0x0ff 8000 */
 	/* (0xff8 - core)<<12 */
 
-	mov	r0,#0xffc
+	mov	r0,#0xff0
+	mov	r0,#0x00c
 	sub	r0,r3
 	lsl	r0,#12
 	mov	sp,r0
