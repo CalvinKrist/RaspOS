@@ -1,8 +1,6 @@
 #include "utils.h"
 #include "peripherals/mini_uart.h"
 #include "peripherals/gpio.h"
-#include "peripherals/irq.h"
-#include "peripherals/uart.h"
 
 void uart_send ( char c )
 {
@@ -29,10 +27,6 @@ void uart_send_string(char* str)
 	}
 }
 
-void uart_enable_interupts() {
-	//put32(MU_BASE + 0x0b210, 1<<29);
-}
-
 void uart_init ( void )
 {
 	unsigned int selector;
@@ -56,24 +50,6 @@ void uart_init ( void )
 	put32(AUX_MU_LCR_REG,3);                //Enable 8 bit mode
 	put32(AUX_MU_MCR_REG,0);                //Set RTS line to be always high
 	put32(AUX_MU_BAUD_REG,270);             //Set baud rate to 115200
-	
-	//Clear pending interupts
-	put32(UART_ICR, 0x7FF);
 
-	//clear RX, TX FIFO
-	put32(AUX_MU_IIR_REG, 0xc6);
-	
-	//IER.RXEI=1, IER.LSI=1
-	put32(AUX_MU_IER_REG, 3);
-	
 	put32(AUX_MU_CNTL_REG,3);               //Finally, enable transmitter and receiver
-	
-	put32(ENABLE_IRQS_1, 1 << 29);
-}
-
-
-// This function is required by printf function
-void putc ( void* p, char c)
-{
-	uart_send(c);
 }

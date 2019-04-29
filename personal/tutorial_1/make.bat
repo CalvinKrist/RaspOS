@@ -8,6 +8,7 @@ del kernel8.img
 :: Path in format of /c/Users . . . etc
 echo_path.vbs
 set /p docker_path=<path.tmp
+del path.tmp
 
 docker run --rm -v %docker_path% -w /app smatyukevich/raspberry-pi-os-builder make
 emulate
