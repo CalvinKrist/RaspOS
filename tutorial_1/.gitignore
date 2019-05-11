@@ -1,0 +1,4 @@
+build/*
+path.tmp
+kernel8.img
+src/linker.ld
