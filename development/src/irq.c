@@ -38,8 +38,11 @@ void show_invalid_entry_message(int type, unsigned long esr, unsigned long addre
 void handle_irq(void)
 {
 	unsigned int irq = get32(IRQ_BASIC_PENDING);
-	if (irq & ARM_TIMER_IRQ)
+	if (irq & ARM_TIMER_IRQ) {
 		handle_timer_irq();
-	else
-		printf("Unknown pending irq: %x\r\n", irq);
+        printf("TIMER");
+    }
+	else {
+		//printf("Unknown pending irq: %d\r\n", irq);
+    }
 }
