@@ -21,7 +21,7 @@ void handle_timer_irq( void )
 {
 	//ticks++;
 	put32(ARM_TIMER_CLEAR, 1);
-	//printf("Timer interrupt received from CPU %d with ticks %d\n\r", getCPU(), ticks);
+	printf("Timer interrupt received with %d ticks \n\r", ticks);
 	
 	//printf("IIR_REG: %d\n", get32(AUX_MU_IIR_REG));
 }

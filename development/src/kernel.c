@@ -15,7 +15,7 @@ void kernel_main(void)
 	irq_vector_init();
 	timer_init();
 	//enable_interrupt_controller();
-	put32(ENABLE_BASIC_IRQS, ARM_TIMER_IRQ_ENABLE);
+	put32(ENABLE_BASIC_IRQS, ARM_TIMER_IRQ);
 	enable_irq();
 	
 	printf("Hello from CPU %d!", getCPU());
